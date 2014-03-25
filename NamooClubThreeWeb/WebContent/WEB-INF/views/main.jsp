@@ -75,7 +75,7 @@
     </div>
 
     <!-- form -->
-    <form class="form-signin" action="./community/index.html">
+    <form class="form-signin" action="./login.do">
         <input type="text" class="form-control" id="inputEmail" placeholder="아이디">
         <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호">
         <label class="checkbox">
@@ -83,7 +83,7 @@
         </label>
         <div class="row form-btn">
             <button class="btn btn-large btn-warning" type="submit">로그인</button>
-            <button class="btn btn-large btn-default">회원가입</button>
+            <input type="button" onclick= 'location.href="./join.jsp"' class="btn btn-large btn-default" value="회원가입"/>
         </div>
     </form>
 

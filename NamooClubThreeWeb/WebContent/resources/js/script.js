@@ -1,0 +1,6 @@
+function modify() {
+	//
+	history.back();
+};
+
+

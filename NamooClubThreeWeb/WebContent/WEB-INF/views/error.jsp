@@ -9,6 +9,7 @@
 <title>나무커뮤니티</title>
     <link href="././resources/css/bootstrap.css" rel="stylesheet">
     <link href="././resources/css/bootswatch.min.css" rel="stylesheet">
+    <script src='././resources/js/script.js' type='text/javascript'></script>
     <style type="text/css">
         body {
             padding-top: 100px;
@@ -75,7 +76,7 @@
         <p>에러 내용 출력합니다.</p>
 
         <div class="row error-btn">
-            <button class="btn btn-large btn-default">홈으로 이동</button>
+            <button class="btn btn-large btn-default" onclick="modify();" >홈으로 이동</button>
         </div>
     </div>
 

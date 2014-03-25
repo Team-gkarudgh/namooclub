@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("clubcreatectrol.do")
+@WebServlet("/clubcreatectrol.do")
 public class ClubCreateCtrol extends	HttpServlet{
 
 	private static final long serialVersionUID = -1390693297338441671L;
