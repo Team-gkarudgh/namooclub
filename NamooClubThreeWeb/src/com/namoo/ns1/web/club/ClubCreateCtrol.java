@@ -8,8 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("/views/club/create.do")
-public class Create extends	HttpServlet{
+@WebServlet("clubcreatectrol.do")
+public class ClubCreateCtrol extends	HttpServlet{
 
 	private static final long serialVersionUID = -1390693297338441671L;
 
@@ -23,7 +23,7 @@ public class Create extends	HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("../community/main.do");
+		RequestDispatcher dispatcher = req.getRequestDispatcher(ClubPageConstants.Create_Page);
 		dispatcher.forward(req, resp);
 	}
 

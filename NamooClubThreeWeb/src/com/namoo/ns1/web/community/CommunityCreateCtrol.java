@@ -8,10 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("/views/community/join.do")
-public class Join extends HttpServlet {
+@WebServlet("/communitycreatectrol.do")
+public class CommunityCreateCtrol extends HttpServlet {
 
-	private static final long serialVersionUID = 691935663117063100L;
+	private static final long serialVersionUID = -1894070412146334568L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -23,9 +23,9 @@ public class Join extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("./join.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.Create_Page);
 		dispatcher.forward(req, resp);
-
+	
 	}
 
 }

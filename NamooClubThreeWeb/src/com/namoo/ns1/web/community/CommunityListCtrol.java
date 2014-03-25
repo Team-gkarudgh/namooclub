@@ -8,10 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("/views/community/create.do")
-public class Create extends HttpServlet {
 
-	private static final long serialVersionUID = -1894070412146334568L;
+@WebServlet("/communitylistctrol.do")
+public class CommunityListCtrol extends HttpServlet {
+
+	private static final long serialVersionUID = 6547042998001964975L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -23,9 +24,8 @@ public class Create extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("./create.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.List_Page);
 		dispatcher.forward(req, resp);
-	
 	}
 
 }

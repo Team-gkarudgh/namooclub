@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/community/main.do")
-public class Main extends HttpServlet {
+@WebServlet("/communitymainctrol.do")
+public class CommunityMainCtrol extends HttpServlet {
 
 	private static final long serialVersionUID = 6547042998001964975L;
 
@@ -24,7 +24,7 @@ public class Main extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("./list.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.Main_Page);
 		dispatcher.forward(req, resp);
 	}
 
