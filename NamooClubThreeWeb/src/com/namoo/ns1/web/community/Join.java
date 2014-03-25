@@ -41,6 +41,7 @@ public class Join extends HttpServlet {
 		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
 		service.joinAsMember(communityName, name, email, password);
 				System.out.println(name);
+				
 		RequestDispatcher dispatcher = req.getRequestDispatcher("./join.jsp");
 		dispatcher.forward(req, resp);
 
