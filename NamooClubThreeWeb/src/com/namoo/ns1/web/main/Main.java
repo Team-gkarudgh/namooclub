@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("/views/main.xhtml")
+@WebServlet("/main.xhtml")
 public class Main extends	HttpServlet{
 
 	private static final long serialVersionUID = 776824871779717327L;
@@ -23,7 +23,7 @@ public class Main extends	HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("./main.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		dispatcher.forward(req, resp);
 	}
 
