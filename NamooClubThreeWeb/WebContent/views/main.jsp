@@ -8,11 +8,7 @@
 </head>
 <body>
 <h1>메인화면입니다.</h1>
-<form action="${ctx}/user/login.do" method="post">
-	<input type="text" id="userId" name="userId" />
-	<input type="password" id="password" name="password" />
-	<input type="submit" value="로그인"/>
-</form>
+gggggggggg
 
 </body>
 </html>
