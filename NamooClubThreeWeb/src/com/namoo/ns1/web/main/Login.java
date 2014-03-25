@@ -23,6 +23,8 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
+		
+	/*	req.getRequestURL().toString()*/
 /*		TownerService service = NamooClubServiceFactory.getInstance().getTownerService();
 		
 		String email = req.getParameter("email");
