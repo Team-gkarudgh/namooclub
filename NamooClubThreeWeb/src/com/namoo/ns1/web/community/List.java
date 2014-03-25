@@ -9,6 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.namoo.ns1.service.facade.CommunityService;
+import com.namoo.ns1.service.factory.NamooClubServiceFactory;
+
+import dom.entity.Community;
+
 @WebServlet("/views/community/list.do")
 public class List extends HttpServlet {
 
@@ -23,6 +28,14 @@ public class List extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		
+		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
+		
+		java.util.List<Community> list = service.findAllCommunities();
+		
+		req.setAttribute("list", list);
+		
+		System.out.println(list);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("./list.jsp");
 		dispatcher.forward(req, resp);
