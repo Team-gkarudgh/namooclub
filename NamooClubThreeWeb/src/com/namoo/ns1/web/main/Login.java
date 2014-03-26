@@ -33,12 +33,14 @@ public class Login extends HttpServlet {
 		String password = req.getParameter("password");
 
 		service.loginAsTowner(email, password);
+		System.out.println(email);
 
 		if (service.loginAsTowner(email, password) == true) {
 			req.getSession().setAttribute("email", email);
 			resp.sendRedirect("./community/list.do");
 		} else {
 			req.getSession().removeAttribute("email");
+			System.out.println("노로그인");
 			resp.sendRedirect("./error.jsp");
 
 		}
