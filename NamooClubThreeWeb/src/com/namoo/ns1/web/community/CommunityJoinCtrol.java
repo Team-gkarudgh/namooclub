@@ -29,7 +29,7 @@ public class CommunityJoinCtrol extends HttpServlet {
 		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
 		
 		String communityName = req.getParameter("communityName");
-		String email = req.getParameter("email");
+		String email = (String) req.getSession().getAttribute("email");
 		
 		service.joinAsMember(communityName, email);
 		
