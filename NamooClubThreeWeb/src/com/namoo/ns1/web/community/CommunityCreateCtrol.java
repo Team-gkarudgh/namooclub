@@ -26,13 +26,11 @@ public class CommunityCreateCtrol extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
-		
 		String communityName = req.getParameter("communityName");
 		String description = req.getParameter("description");
-		String email = req.getParameter("email");
-
-		//주민으로 등록된경우
+		String email = (String) req.getSession().getAttribute("email");
+				
+		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
 		service.registCommunity(communityName, description, email);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.Create_Page);
