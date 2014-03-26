@@ -1,13 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>나무커뮤니티</title>
-    <link href="./././resources/css/bootstrap.css" rel="stylesheet">
-    <link href="./././resources/css/bootswatch.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+<%@ include file="/WEB-INF/views/common/common.jsp" %>
+<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -64,7 +62,7 @@
                 <div class="jumbotron">
                     <h1>나무 커뮤니티와 함께!</h1>
                     <p>나무 커뮤니티와 함께 특정 취미와 관심사, 특정 그룹 또는 조직에 관한 대화를 시작하세요.</p>
-                    <p><a href="./open.html" class="btn btn-warning btn-lg">커뮤니티 개설하기</a></p>
+                    <p><a href="./view/community/create.jsp" class="btn btn-warning btn-lg">커뮤니티 개설하기</a></p>
                 </div>
             </div>
         </div>
@@ -178,8 +176,5 @@
     </footer>
 </div>
 
-<script src="../js/jquery-2.1.0.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/bootswatch.js"></script>
 </body>
 </html>

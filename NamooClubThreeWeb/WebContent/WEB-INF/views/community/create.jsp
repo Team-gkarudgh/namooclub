@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>나무커뮤니티</title>
-    <link href="./././resources/css/bootstrap.css" rel="stylesheet">
-    <link href="./././resources/css/bootswatch.min.css" rel="stylesheet">
+<%@ include file="/WEB-INF/views/common/common.jsp" %>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -81,13 +79,13 @@
 
             <div class="well">
                 <p>나와 같은 관심사를 가진 멤버를 모집하고 열심히 운영하여 커뮤니티를 성장시켜 보세요.</p>
-                <form class="form-horizontal" action="./index.html" method="post">
+                <form class="form-horizontal" action="${ctx}/communitycreatectrol.do" method="post">
                     <fieldset>
                         <div class="form-group">
                             <label class="col-lg-2 control-label">커뮤니티명</label>
 
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="커뮤니티명">
+                                <input type="text" class="form-control" placeholder="커뮤니티명" name="communityName">
                             </div>
                         </div>
                         <div class="form-group">
@@ -112,17 +110,8 @@
                             <label for="textArea" class="col-lg-2 control-label">커뮤니티 대표문구</label>
 
                             <div class="col-lg-10">
-                                <textarea class="form-control" rows="3" id="textArea"></textarea>
+                                <textarea class="form-control" rows="3" id="textArea" name="description"></textarea>
                                 <span class="help-block">커뮤니티를 소개하는 대표문구를 입력해 주세요. 커뮤니티 홈화면에 입력하신 문구가 출력됩니다.</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-2 control-label">커뮤니티 검색어</label>
-
-                            <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="검색어 1">
-                                <input type="text" class="form-control" placeholder="검색어 2">
-                                <input type="text" class="form-control" placeholder="검색어 3">
                             </div>
                         </div>
                         <div class="form-group">
@@ -131,10 +120,6 @@
                             <div class="col-lg-10">
                                 <input type="text" class="form-control" placeholder="카테고리 1">
                                 <input type="text" class="form-control" placeholder="카테고리 2">
-                                <input type="text" class="form-control" placeholder="카테고리 3">
-                                <input type="text" class="form-control" placeholder="카테고리 4">
-                                <input type="text" class="form-control" placeholder="카테고리 5">
-                                <input type="text" class="form-control" placeholder="카테고리 6">
                             </div>
                         </div>
                         <div class="form-group">
@@ -143,10 +128,6 @@
                             <div class="col-lg-10">
                                 <input type="text" class="form-control" placeholder="질문내용 1">
                                 <input type="text" class="form-control" placeholder="질문내용 2">
-                                <input type="text" class="form-control" placeholder="질문내용 3">
-                                <input type="text" class="form-control" placeholder="질문내용 4">
-                                <input type="text" class="form-control" placeholder="질문내용 5">
-                                <input type="text" class="form-control" placeholder="질문내용 6">
                             </div>
                         </div>
                         <div class="form-group">
@@ -180,9 +161,5 @@
         </div>
     </footer>
 </div>
-
-<script src="../js/jquery-2.1.0.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/bootswatch.js"></script>
 </body>
 </html>
