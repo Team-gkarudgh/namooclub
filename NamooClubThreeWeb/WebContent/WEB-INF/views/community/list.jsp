@@ -95,24 +95,6 @@
                             <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
                             <button type="button" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
                         </li>
-                        <li class="list-group-item">
-                            <span class="badge">2011.03.21</span>
-                            <h4><a href="../club/index.html">영화 커뮤니티 (클럽:4, 팀:21, 회원:59)</a></h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">2011.03.21</span>
-                            <h4><a href="../club/index.html">독서 커뮤니티 (클럽:4, 팀:21, 회원:59)</a></h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">2011.03.21</span>
-                            <h4><a href="../club/index.html">맛집 탐방 커뮤니티 (클럽:4, 팀:21, 회원:59)</a></h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
-                        </li>
                     </ul>
 
                     <button type="button" class="btn btn-default btn-lg btn-block">커뮤니티 목록 더보기</button>
@@ -129,24 +111,6 @@
                             <span class="badge">2011.03.21</span>
                             <h4><span class="label label-info">추천</span>&nbsp;건강 커뮤니티 (클럽:4, 팀:21, 회원:59)</h4>
                             <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm" onclick="location.href='join.html'">멤버 가입하기</button>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">2011.03.21</span>
-                            <h4><span class="label label-warning">인기</span>&nbsp;영화 커뮤니티 (클럽:4, 팀:21, 회원:59)</h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm" onclick="location.href='join.html'">멤버 가입하기</button>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">2011.03.21</span>
-                            <h4>독서 커뮤니티 (클럽:4, 팀:21, 회원:59)</h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm" onclick="location.href='join.html'">멤버 가입하기</button>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">2011.03.21</span>
-                            <h4>맛집 탐방 커뮤니티 (클럽:4, 팀:21, 회원:59)</h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
                             <button type="button" class="btn btn-default btn-sm" onclick="location.href='join.html'">멤버 가입하기</button>
                         </li>
                     </ul>
