@@ -35,5 +35,4 @@ public class CommunityRemoveCtrol extends HttpServlet{
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/communitylistctrol.do");
 		dispatcher.forward(req, resp);
 	}
-
 }
