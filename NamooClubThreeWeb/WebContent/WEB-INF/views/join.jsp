@@ -5,8 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>나무커뮤니티</title>
-    <link href="././resources/css/bootstrap.css" rel="stylesheet">
-    <link href="././resources/css/bootswatch.min.css" rel="stylesheet">
+    <link href="${ctx}/resources/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/bootswatch.min.css" rel="stylesheet">
+    <script src='${pageContext.request.contextPath}/resources/js/script.js' type='text/javascript'></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -53,7 +54,7 @@
 
             <div class="well">
                 <p>회원가입을 위해 아래 내용들을 작성해 주세요.</p>
-                <form class="form-horizontal" action="./join.do">
+                <form class="form-horizontal" action="${ctx}/join.do" method="post">
                     <fieldset>
                         <div class="form-group">
                             <label class="col-lg-2 control-label">이름</label>
@@ -133,7 +134,7 @@
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <button type="submit" class="btn btn-primary">확인</button>
-                                <button class="btn btn-default">취소</button>
+                               <button class="btn btn-large btn-default" onclick="modify();" >취소</button>
                             </div>
                         </div>
                     </fieldset>
@@ -162,8 +163,8 @@
     </footer>
 </div>
 
-<script src="./js/jquery-2.1.0.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/bootswatch.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-2.1.0.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootswatch.js"></script>
 </body>
 </html>

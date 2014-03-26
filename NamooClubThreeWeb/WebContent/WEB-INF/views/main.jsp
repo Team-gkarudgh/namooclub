@@ -83,7 +83,7 @@
         </label>
         <div class="row form-btn">
             <button class="btn btn-large btn-warning" type="submit">로그인</button>
-            <input type="button" onclick= 'location.href="./join.jsp"' class="btn btn-large btn-default" value="회원가입"/>
+            <input type="button" onclick= 'location.href="./view/join.jsp"' class="btn btn-large btn-default" value="회원가입"/>
         </div>
     </form>
 

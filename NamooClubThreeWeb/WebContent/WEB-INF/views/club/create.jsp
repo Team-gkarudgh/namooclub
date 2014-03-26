@@ -91,7 +91,7 @@
 
             <div class="well">
                 <p>아래 질문 내용들을 정성껏 작성해 주세요.</p>
-                <form class="form-horizontal" action="./index.html">
+                <form class="form-horizontal" action="./index.html" method="post">
                     <fieldset>
                         <div class="form-group">
                             <label class="col-lg-2 control-label">클럽 가입 목적은 무엇입니까?</label>
