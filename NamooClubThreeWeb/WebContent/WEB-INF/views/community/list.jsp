@@ -73,7 +73,7 @@
 <!-- Container ======================================================================================= -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+d        <div class="col-lg-12">
             <!-- ★★★ Tab Menu -->
             <ul class="nav nav-tabs" style="margin-bottom: 15px;">
                 <li class="active"><a href="#joined" data-toggle="tab">가입 커뮤니티</a></li>
@@ -90,12 +90,12 @@
                     </div>
 
                     <ul class="list-group">
-                    <c:forEach var="list" items="${list}">
+                    <c:forEach var="mycommunity" items="${myList}">
                         <li class="list-group-item">
                             <span class="badge">2011.03.21</span>
-                            <h4><a href="../club/index.html">${list.name} (클럽:4, 팀:21, 회원:${list.members})</a></h4>
-                            <p>${list.description}</p>
-                            <button type="button" onclick="location.href='${ctx}/communityremovectrol.do?communityName=${list.name}'" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
+                            <h4><a href="../club/index.html">${mycommunity.name}</a></h4>
+                            <p>${mycommunity.description}</p>
+                            <button type="button" onclick="location.href='${ctx}/communitywithdrawctrol.do?communityId=${mycommunity.id}'" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
                         </li>
                      </c:forEach>
                     </ul>
@@ -110,12 +110,16 @@
                     </div>
 
                     <ul class="list-group">
+                    
+                    <c:forEach var="community" items="${list}">
                         <li class="list-group-item">
                             <span class="badge">2011.03.21</span>
-                            <h4><span class="label label-info">추천</span>&nbsp;건강 커뮤니티 (클럽:4, 팀:21, 회원:59)</h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
-                            <button type="button" class="btn btn-default btn-sm" onclick="location.href='join.html'">멤버 가입하기</button>
+                            <h4><span class="label label-info">추천</span>&nbsp;${community.name}</h4>
+                            <p>${community.description}</p>
+                            <button type="button" onclick="location.href='${ctx}/communityjoinpagectrol.do?communityId=${community.id}'" class="btn btn-default btn-sm">멤버가입</button>
                         </li>
+                     </c:forEach>
+
                     </ul>
 
                     <button type="button" class="btn btn-default btn-lg btn-block">커뮤니티 목록 더보기</button>

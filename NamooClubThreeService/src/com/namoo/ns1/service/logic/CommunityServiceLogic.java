@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.namoo.ns1.data.EntityManager;
+import com.namoo.ns1.service.Idgenerator.SequenceGenerator;
 import com.namoo.ns1.service.facade.CommunityService;
 import com.namoo.ns1.service.logic.exception.NamooExceptionFactory;
 
@@ -23,8 +24,9 @@ public class CommunityServiceLogic implements CommunityService {
 	@Deprecated
 	public void registCommunity(String communityName, String adminName, String email, String password){
 		//
+		String id = SequenceGenerator.getNextId(Community.class);
 		SocialPerson admin = createPerson(adminName, email, password);
-		Community community = new Community(communityName, "", admin);
+		Community community = new Community(communityName, "", admin, id);
 		
 		em.store(community);
 	}
@@ -39,9 +41,9 @@ public class CommunityServiceLogic implements CommunityService {
 		if (em.find(SocialPerson.class, email) != null) {
 			throw NamooExceptionFactory.createRuntime("해당 주민이 이미 존재합니다.");
 		}
-
+		String id = SequenceGenerator.getNextId(Community.class);
 		SocialPerson admin = createPerson(adminName, email, password);
-		Community community = new Community(communityName, description, admin);
+		Community community = new Community(communityName, description, admin, id);
 		
 		em.store(community);
 	}
@@ -57,8 +59,8 @@ public class CommunityServiceLogic implements CommunityService {
 		if (towner == null) {
 			throw NamooExceptionFactory.createRuntime("존재하지 않는 주민입니다.");
 		}
-		
-		Community community = new Community(communityName, description, towner);
+		String id = SequenceGenerator.getNextId(Community.class);
+		Community community = new Community(communityName, description, towner,id);
 		em.store(community);
 	}
 

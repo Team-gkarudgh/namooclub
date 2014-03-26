@@ -8,11 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.namoo.ns1.service.facade.CommunityService;
 import com.namoo.ns1.service.factory.NamooClubServiceFactory;
-@WebServlet("/communityremovectrol.do")
-public class CommunityRemoveCtrol extends HttpServlet{
+@WebServlet("/communitywithdrawctrol.do")
+public class CommunityWithdrawCtrol extends HttpServlet{
 
 	private static final long serialVersionUID = -6860106695571437803L;
 
@@ -27,11 +28,9 @@ public class CommunityRemoveCtrol extends HttpServlet{
 			throws ServletException, IOException {
 		
 		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
-		
-		String communityName = req.getParameter("communityName");
-		
-		service.removeCommunity(communityName);
-		
+		HttpSession session = req.getSession();
+		String communityId = req.getParameter("communityId");
+		service.withdrawalCommunity(communityId, (String)session.getAttribute("email"));
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/communitylistctrol.do");
 		dispatcher.forward(req, resp);
 	}

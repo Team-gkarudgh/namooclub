@@ -21,9 +21,9 @@ public class CommunityAssistant {
 	public void createCommunity(String communityName, String adminName, String email, String password){
 		//
 		SocialPerson admin = createPerson(adminName, email, password);
-		Community community = new Community(communityName, "", admin);
-		
-		communityRepo.addCommunity(community);
+//		Community community = new Community(communityName, "", admin);
+//		
+//		communityRepo.addCommunity(community);
 	}
 
 	/**

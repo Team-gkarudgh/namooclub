@@ -61,8 +61,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="jumbotron">
-                    <h1>건강 커뮤니티</h1>
-                    <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
+                    <h1>${communityName}</h1>
+                    <p>${description}</p>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="col-sm-12 col-lg-12">
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li class="active">건강커뮤니티</li>
+                    <li class="active">${communityName}</li>
                 </ol>
             </div>
         </div>
@@ -89,7 +89,7 @@
 
             <div class="well">
                 <p>아래 질문 내용들을 정성껏 작성해 주세요.</p>
-                <form class="form-horizontal" action="./index.html" method="post">
+                <form class="form-horizontal" action="./communityjoinctrol.do?communityId=${communityId}" method="post">
                     <fieldset>
                         <div class="form-group">
                             <label class="col-lg-2 control-label">커뮤니티 가입 목적은 무엇입니까?</label>

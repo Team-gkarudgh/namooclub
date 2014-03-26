@@ -28,14 +28,14 @@ public class CommunityJoinCtrol extends HttpServlet {
 		
 		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
 		
-		String communityName = req.getParameter("communityName");
+		String communityId = req.getParameter("communityId");
 		String email = (String) req.getSession().getAttribute("email");
 		
-		service.joinAsMember(communityName, email);
+		service.joinAsMember(communityId, email);
 		
-		System.out.println(communityName);
+		System.out.println(communityId);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.Join_Page);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("./communitylistctrol.do");
 		dispatcher.forward(req, resp);
 
 	}
