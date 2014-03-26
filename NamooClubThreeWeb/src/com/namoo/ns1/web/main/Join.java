@@ -31,6 +31,7 @@ public class Join extends HttpServlet {
 		String password = req.getParameter("password");
 		
 		System.out.println(name);
+		
 		TownerService service = NamooClubServiceFactory.getInstance().getTownerService();
 		service.registTowner(name, email, password);
 		

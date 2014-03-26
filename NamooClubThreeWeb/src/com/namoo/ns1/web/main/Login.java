@@ -40,12 +40,9 @@ public class Login extends HttpServlet {
 			resp.sendRedirect("./community/list.do");
 		} else {
 			req.getSession().removeAttribute("email");
-			System.out.println("노로그인");
 			resp.sendRedirect("./error.jsp");
 		}
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher(MainPageConstants.Login_Page);
-		dispatcher.forward(req, resp);
 	}
 
 }
