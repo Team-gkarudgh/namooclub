@@ -32,7 +32,9 @@ public class CommunityJoinCtrol extends HttpServlet {
 		String email = req.getParameter("email");
 		
 		service.joinAsMember(communityName, email);
-						
+		
+		System.out.println(communityName);
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.Join_Page);
 		dispatcher.forward(req, resp);
 
