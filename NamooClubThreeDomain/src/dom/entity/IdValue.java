@@ -6,18 +6,18 @@ public class IdValue implements Identifiable{
 
 	private static final long serialVersionUID = -3451103639698915547L;
 	
-	private String communityName;
+	private String name;
 	private int value;
 	
-	public IdValue(String communityName) {
+	public IdValue(String name) {
 		// 
-		this.communityName = communityName;
+		this.name = name;
 	}
 	public String getName() {
-		return communityName;
+		return name;
 	}
-	public void setName(String communityName) {
-		this.communityName = communityName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public int getValue() {
 		return value;
@@ -29,7 +29,7 @@ public class IdValue implements Identifiable{
 	@Override
 	public String getOId() {
 		// 
-		return communityName;
+		return name;
 	}
 	public void increase() {
 		// 
