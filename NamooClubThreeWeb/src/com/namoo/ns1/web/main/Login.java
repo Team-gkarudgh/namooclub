@@ -2,6 +2,7 @@ package com.namoo.ns1.web.main;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,10 +37,11 @@ public class Login extends HttpServlet {
 
 		if (service.loginAsTowner(email, password) == true) {
 			req.getSession().setAttribute("email", email);
-			resp.sendRedirect("./community/list.do");
+			req.getSession().setAttribute("password", password);
+			resp.sendRedirect(MainPageConstants.Login_Page);
 		} else {
-			req.getSession().removeAttribute("email");
-			resp.sendRedirect("./error.jsp");
+			RequestDispatcher dispatcher = req.getRequestDispatcher(MainPageConstants.Error_Page);
+			dispatcher.forward(req, resp);
 		}
 		
 	}
