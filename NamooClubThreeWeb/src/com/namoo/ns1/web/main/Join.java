@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.namoo.ns1.service.facade.TownerService;
 import com.namoo.ns1.service.factory.NamooClubServiceFactory;
+
 @WebServlet("/join.do")
 public class Join extends HttpServlet {
 
