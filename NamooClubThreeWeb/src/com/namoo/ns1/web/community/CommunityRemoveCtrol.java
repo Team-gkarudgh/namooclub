@@ -28,7 +28,7 @@ public class CommunityRemoveCtrol extends HttpServlet{
 		
 		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
 		
-		String communityName = (String) req.getAttribute("communityName");
+		String communityName = req.getParameter("communityName");
 		
 		service.removeCommunity(communityName);
 		

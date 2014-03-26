@@ -95,7 +95,7 @@
                             <span class="badge">2011.03.21</span>
                             <h4><a href="../club/index.html">${list.name} (클럽:4, 팀:21, 회원:${list.members})</a></h4>
                             <p>${list.description}</p>
-                            <button type="button" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
+                            <button type="button" onclick="location.href='${ctx}/communityremovectrol.do?communityName=${list.name}'" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
                         </li>
                      </c:forEach>
                     </ul>
