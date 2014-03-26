@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.namoo.ns1.service.facade.CommunityService;
+import com.namoo.ns1.service.facade.TownerService;
 import com.namoo.ns1.service.factory.NamooClubServiceFactory;
 @WebServlet("/join.do")
 public class Join extends HttpServlet {
@@ -26,15 +26,14 @@ public class Join extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		String communityName = getInitParameter("communityName");
-		String name = getInitParameter("name");
-		String email = getInitParameter("email");
-		String password = getInitParameter("password");
-
-		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
-		service.joinAsMember(communityName, name, email, password);
-				System.out.println(name);
-				
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		String password = req.getParameter("password");
+		
+		System.out.println(name);
+		TownerService service = NamooClubServiceFactory.getInstance().getTownerService();
+		service.registTowner(name, email, password);
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher(MainPageConstants.Join_Page);
 		dispatcher.forward(req, resp);
 		

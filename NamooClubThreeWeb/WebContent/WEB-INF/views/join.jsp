@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>나무커뮤니티</title>
     <link href="${ctx}/resources/css/bootstrap.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootswatch.min.css" rel="stylesheet">
-    <script src='${pageContext.request.contextPath}/resources/js/script.js' type='text/javascript'></script>
+    <link href="${ctx}/resources/css/bootswatch.min.css" rel="stylesheet">
+    <script src='${ctx}/resources/js/script.js' type='text/javascript'></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -134,7 +134,7 @@
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <button type="submit" class="btn btn-primary">확인</button>
-                               <button class="btn btn-large btn-default" onclick="modify();" >취소</button>
+                               <button class="btn btn-large btn-default" onclick='modify(); return false;' >취소</button>
                             </div>
                         </div>
                     </fieldset>
@@ -163,8 +163,8 @@
     </footer>
 </div>
 
-<script src="${pageContext.request.contextPath}/resources/js/jquery-2.1.0.js"></script>
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/js/bootswatch.js"></script>
+<script src="${ctx}/resources/js/jquery-2.1.0.js"></script>
+<script src="${ctx}/resources/js/bootstrap.min.js"></script>
+<script src="${ctx}/resources/js/bootswatch.js"></script>
 </body>
 </html>

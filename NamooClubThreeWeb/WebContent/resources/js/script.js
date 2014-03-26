@@ -1,6 +1,4 @@
 function modify() {
 	//
 	history.back();
-};
-
-
+}
