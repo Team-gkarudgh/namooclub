@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.namoo.ns1.service.facade.CommunityService;
+import com.namoo.ns1.service.factory.NamooClubServiceFactory;
 @WebServlet("/communityjoinctrol.do")
 public class CommunityJoinCtrol extends HttpServlet {
 
@@ -23,6 +26,13 @@ public class CommunityJoinCtrol extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
+		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
+		
+		String communityName = req.getParameter("communityName");
+		String email = req.getParameter("email");
+		
+		service.joinAsMember(communityName, email);
+						
 		RequestDispatcher dispatcher = req.getRequestDispatcher(CommunityPageConstants.Join_Page);
 		dispatcher.forward(req, resp);
 
