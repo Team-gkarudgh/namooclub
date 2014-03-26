@@ -1,6 +1,7 @@
 package com.namoo.ns1.web.community;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,9 +31,7 @@ public class CommunityListCtrol extends HttpServlet {
 			throws ServletException, IOException {
 		
 		CommunityService service = NamooClubServiceFactory.getInstance().getCommunityService();
-		
-		java.util.List<Community> list = service.findAllCommunities();
-		
+		List<Community> list = service.findAllCommunities();		
 		req.setAttribute("list", list);
 		
 		System.out.println(list);
