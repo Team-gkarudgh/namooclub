@@ -7,8 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>나무커뮤니티</title>
-    <link href="././resources/css/bootstrap.css" rel="stylesheet">
-    <link href="././resources/css/bootswatch.min.css" rel="stylesheet">
+<%@ include file="/WEB-INF/views/common/common.jsp" %>
     <script src='././resources/js/script.js' type='text/javascript'></script>
     <style type="text/css">
         body {
@@ -85,9 +84,5 @@
         <p>© NamooSori 2014.</p>
     </div>
 </div>
-
-<script src="js/jquery-2.1.0.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootswatch.js"></script>
 </body>
 </html>

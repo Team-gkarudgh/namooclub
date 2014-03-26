@@ -5,8 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>나무커뮤니티</title>
-    <link href="${ctx}/resources/css/bootstrap.css" rel="stylesheet">
-    <link href="${ctx}/resources/css/bootswatch.min.css" rel="stylesheet">
+<%@ include file="/WEB-INF/views/common/common.jsp" %>
     <script src='${ctx}/resources/js/script.js' type='text/javascript'></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -163,8 +162,6 @@
     </footer>
 </div>
 
-<script src="${ctx}/resources/js/jquery-2.1.0.js"></script>
-<script src="${ctx}/resources/js/bootstrap.min.js"></script>
-<script src="${ctx}/resources/js/bootswatch.js"></script>
+
 </body>
 </html>
