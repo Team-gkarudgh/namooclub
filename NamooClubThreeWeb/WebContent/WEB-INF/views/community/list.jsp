@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -89,12 +90,14 @@
                     </div>
 
                     <ul class="list-group">
+                    <c:forEach var="list" items="${list}">
                         <li class="list-group-item">
                             <span class="badge">2011.03.21</span>
-                            <h4><a href="../club/index.html">건강 커뮤니티 (클럽:4, 팀:21, 회원:59)</a></h4>
-                            <p>전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.</p>
+                            <h4><a href="../club/index.html">${list.name} (클럽:4, 팀:21, 회원:${list.members})</a></h4>
+                            <p>${list.description}</p>
                             <button type="button" class="btn btn-default btn-sm">멤버탈퇴 신청하기</button>
                         </li>
+                     </c:forEach>
                     </ul>
 
                     <button type="button" class="btn btn-default btn-lg btn-block">커뮤니티 목록 더보기</button>
