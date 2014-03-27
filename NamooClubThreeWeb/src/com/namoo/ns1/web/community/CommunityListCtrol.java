@@ -7,29 +7,23 @@ import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.namoo.ns1.service.facade.CommunityService;
 import com.namoo.ns1.service.factory.NamooClubServiceFactory;
+import com.namoo.ns1.web.controller.DefaultController;
+import com.namoo.ns1.web.controller.LoginRequired;
 
 import dom.entity.Community;
 
 @WebServlet("/communitylistctrol.do")
-public class CommunityListCtrol extends HttpServlet {
-
-	private static final long serialVersionUID = 6547042998001964975L;
-
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		doPost(req, resp);
-	}
+@LoginRequired
+public class CommunityListCtrol extends DefaultController {
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+	protected void process(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
 		HttpSession session = req.getSession();
@@ -48,9 +42,11 @@ public class CommunityListCtrol extends HttpServlet {
 		dispatcher.forward(req, resp);
 		
 		
-		
-		
 	}
+
+	
+	private static final long serialVersionUID = 6547042998001964975L;
+
 
 	private void filtering(List<Community> list, List<Community> myList) {
 		List<Community> remove = new ArrayList<Community>();
