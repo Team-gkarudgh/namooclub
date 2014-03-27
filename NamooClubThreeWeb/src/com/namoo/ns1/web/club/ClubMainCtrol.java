@@ -22,6 +22,8 @@ public class ClubMainCtrol extends	HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		
+		
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher(ClubPageConstants.Main_Page);
 		dispatcher.forward(req, resp);
