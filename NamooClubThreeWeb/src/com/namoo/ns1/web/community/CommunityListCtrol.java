@@ -21,6 +21,7 @@ import dom.entity.Community;
 @WebServlet("/communitylistctrol.do")
 @LoginRequired
 public class CommunityListCtrol extends DefaultController {
+	private static final long serialVersionUID = 6547042998001964975L;
 
 	@Override
 	protected void process(HttpServletRequest req, HttpServletResponse resp)
@@ -43,10 +44,6 @@ public class CommunityListCtrol extends DefaultController {
 		
 		
 	}
-
-	
-	private static final long serialVersionUID = 6547042998001964975L;
-
 
 	private void filtering(List<Community> list, List<Community> myList) {
 		List<Community> remove = new ArrayList<Community>();

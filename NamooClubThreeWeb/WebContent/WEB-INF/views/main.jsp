@@ -74,8 +74,8 @@
 
     <!-- form -->
     <form class="form-signin" action="./login.do">
-        <input type="text" class="form-control" id="inputEmail" placeholder="아이디" name="email">
-        <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호" name="password">
+        <input type="text" class="form-control" id="inputEmail" placeholder="아이디" required name="email">
+        <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호" required name="password">
         <label class="checkbox">
             <input type="checkbox" value="remember-me"> 아이디 기억하기
         </label>
